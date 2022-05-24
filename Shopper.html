@@ -32,51 +32,7 @@
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
-		//*******Pre-Chat Fields*********
-		window._snapinsSnippetSettingsFile = (function() {
-
-		  // Logs that the snippet settings file was loaded successfully
-		  //console.log("Snippet settings file loaded.");
-
-		  embedded_svc.snippetSettingsFile.extraPrechatFormDetails = [{
-			"label":"First Name", 
-			"transcriptFields": ["First_Name__c"]
-		  },{
-			"label":"Last Name", 
-			"transcriptFields": ["Last_Name__c"]
-		  },{
-			"label":"Email", 
-			"transcriptFields": ["Email__c"]
-		  },{
-			"label":"Order Reference Number", 
-			"transcriptFields": ["Order_Reference_Number__c"]
-		  }];
-		  
-		  embedded_svc.snippetSettingsFile.extraPrechatInfo = [{
-		  "entityFieldMaps": [{
-			"doCreate":false,
-			"doFind":true,
-			"fieldName":"LastName",
-			"isExactMatch":true,
-			"label":"Last Name"
-		  }, {
-			"doCreate":false,
-			"doFind":true,
-			"fieldName":"FirstName",
-			"isExactMatch":true,
-			"label":"First Name"
-		  }, {
-			"doCreate":false,
-			"doFind":true,
-			"fieldName":"Email",
-			"isExactMatch":true,
-			"label":"Email"
-		  }],
-		  "entityName":"Contact", 
-		  "saveToTranscript": "" 
-		}];
-		})();
-
+		
 
 		embedded_svc.init(
 			'https://verifone123--learn.my.salesforce.com',
